@@ -1,0 +1,524 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Homework 2},
+  pdfauthor={PSTAT 131/231},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Homework 2}
+\author{PSTAT 131/231}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\hypertarget{linear-regression}{%
+\subsection{Linear Regression}\label{linear-regression}}
+
+For this lab, we will be working with a data set from the UCI
+(University of California, Irvine) Machine Learning repository
+(\href{http://archive.ics.uci.edu/ml/datasets/Abalone}{see website
+here}). The full data set consists of \(4,177\) observations of abalone
+in Tasmania. (Fun fact:
+\href{https://en.wikipedia.org/wiki/Tasmania}{Tasmania} supplies about
+\(25\%\) of the yearly world abalone harvest.)
+
+\begin{figure}
+\centering
+\includegraphics[width=1.58333in,height=\textheight]{https://cdn.shopify.com/s/files/1/1198/8002/products/1d89434927bffb6fd1786c19c2d921fb_2000x_652a2391-5a0a-4f10-966c-f759dc08635c_1024x1024.jpg?v=1582320404}
+\caption{\emph{Fig 1. Inside of an abalone shell.}}
+\end{figure}
+
+The age of an abalone is typically determined by cutting the shell open
+and counting the number of rings with a microscope. The purpose of this
+data set is to determine whether abalone age (\textbf{number of rings +
+1.5}) can be accurately predicted using other, easier-to-obtain
+information about the abalone.
+
+The full abalone data set is located in the
+\texttt{\textbackslash{}data} subdirectory. Read it into \emph{R} using
+\texttt{read\_csv()}. Take a moment to read through the codebook
+(\texttt{abalone\_codebook.txt}) and familiarize yourself with the
+variable definitions.
+
+Make sure you load the \texttt{tidyverse} and \texttt{tidymodels}!
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(tidymodels)}
+\FunctionTok{library}\NormalTok{(corrplot)}
+\FunctionTok{library}\NormalTok{(ggthemes)}
+\FunctionTok{library}\NormalTok{(yardstick)}
+\FunctionTok{tidymodels\_prefer}\NormalTok{() }
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{1000}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#load data set}
+\FunctionTok{setwd}\NormalTok{(}\StringTok{"/Users/Yuer\_Hao/Desktop/PSTAT 131/PSTAT231 {-} HW2/PSTAT131 {-} homework{-}2/data"}\NormalTok{)}
+\NormalTok{abalone\_data }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"abalone.csv"}\NormalTok{)}
+\FunctionTok{head}\NormalTok{(abalone\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   type longest_shell diameter height whole_weight shucked_weight viscera_weight
+## 1    M         0.455    0.365  0.095       0.5140         0.2245         0.1010
+## 2    M         0.350    0.265  0.090       0.2255         0.0995         0.0485
+## 3    F         0.530    0.420  0.135       0.6770         0.2565         0.1415
+## 4    M         0.440    0.365  0.125       0.5160         0.2155         0.1140
+## 5    I         0.330    0.255  0.080       0.2050         0.0895         0.0395
+## 6    I         0.425    0.300  0.095       0.3515         0.1410         0.0775
+##   shell_weight rings
+## 1        0.150    15
+## 2        0.070     7
+## 3        0.210     9
+## 4        0.155    10
+## 5        0.055     7
+## 6        0.120     8
+\end{verbatim}
+
+\hypertarget{question-1}{%
+\subsubsection{Question 1}\label{question-1}}
+
+Your goal is to predict abalone age, which is calculated as the number
+of rings plus 1.5. Notice there currently is no \texttt{age} variable in
+the data set. Add \texttt{age} to the data set.
+
+Assess and describe the distribution of \texttt{age}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Add age column to the abalone data set with "rings"+1.5}
+\NormalTok{abalone }\OtherTok{\textless{}{-}}\NormalTok{ abalone\_data }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(abalone\_data, }\AttributeTok{age =}\NormalTok{ rings }\SpecialCharTok{+} \FloatTok{1.5}\NormalTok{) }
+\FunctionTok{head}\NormalTok{(abalone)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   type longest_shell diameter height whole_weight shucked_weight viscera_weight
+## 1    M         0.455    0.365  0.095       0.5140         0.2245         0.1010
+## 2    M         0.350    0.265  0.090       0.2255         0.0995         0.0485
+## 3    F         0.530    0.420  0.135       0.6770         0.2565         0.1415
+## 4    M         0.440    0.365  0.125       0.5160         0.2155         0.1140
+## 5    I         0.330    0.255  0.080       0.2050         0.0895         0.0395
+## 6    I         0.425    0.300  0.095       0.3515         0.1410         0.0775
+##   shell_weight rings  age
+## 1        0.150    15 16.5
+## 2        0.070     7  8.5
+## 3        0.210     9 10.5
+## 4        0.155    10 11.5
+## 5        0.055     7  8.5
+## 6        0.120     8  9.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Check the distribution of \textasciigrave{}age\textasciigrave{}}
+\FunctionTok{ggplot}\NormalTok{(}\AttributeTok{data =}\NormalTok{ abalone, }\FunctionTok{aes}\NormalTok{(age)) }\SpecialCharTok{+}
+  \FunctionTok{geom\_histogram}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{homework-2_files/figure-latex/unnamed-chunk-4-1.pdf}
+According to the plot, the distribution of age relatively follows the
+normal distribution with mean around 10-12. It is also slightly skewed
+to the right. Most of the age data falls between 5 and 18. However,
+there exists few of extreme outliers around age 30.
+
+\hypertarget{question-2}{%
+\subsubsection{Question 2}\label{question-2}}
+
+Split the abalone data into a training set and a testing set. Use
+stratified sampling. You should decide on appropriate percentages for
+splitting the data. \emph{Remember that you'll need to set a seed at the
+beginning of the document to reproduce your results.}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{abalone\_split }\OtherTok{\textless{}{-}} \FunctionTok{initial\_split}\NormalTok{(abalone,}\AttributeTok{prop =} \FloatTok{0.80}\NormalTok{, }\AttributeTok{strata =}\NormalTok{ age)}
+\NormalTok{abalone\_train }\OtherTok{\textless{}{-}} \FunctionTok{training}\NormalTok{(abalone\_split)}
+\NormalTok{abalone\_test }\OtherTok{\textless{}{-}} \FunctionTok{testing}\NormalTok{(abalone\_split)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{question-3}{%
+\subsubsection{Question 3}\label{question-3}}
+
+Using the \textbf{training} data, create a recipe predicting the outcome
+variable, \texttt{age}, with all other predictor variables. Note that
+you should not include \texttt{rings} to predict \texttt{age}. Explain
+why you shouldn't use \texttt{rings} to predict \texttt{age}.
+
+Steps for your recipe:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  dummy code any categorical predictors
+\item
+  create interactions between
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{type} and \texttt{shucked\_weight},
+  \item
+    \texttt{longest\_shell} and \texttt{diameter},
+  \item
+    \texttt{shucked\_weight} and \texttt{shell\_weight}
+  \end{itemize}
+\item
+  center all predictors, and
+\item
+  scale all predictors.
+\end{enumerate}
+
+You'll need to investigate the \texttt{tidymodels} documentation to find
+the appropriate step functions to use.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#not include \textasciigrave{}rings\textasciigrave{} to predict \textasciigrave{}age\textasciigrave{}}
+\NormalTok{aba\_train\_no\_rings }\OtherTok{\textless{}{-}}\NormalTok{ abalone\_train }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{rings)}
+
+\CommentTok{\#create a recipe}
+\NormalTok{abalone\_recipe }\OtherTok{\textless{}{-}} \FunctionTok{recipe}\NormalTok{(age }\SpecialCharTok{\textasciitilde{}}\NormalTok{ ., }\AttributeTok{data =}\NormalTok{ aba\_train\_no\_rings) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{step\_dummy}\NormalTok{(}\FunctionTok{all\_nominal\_predictors}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{step\_interact}\NormalTok{(}\AttributeTok{terms =} \SpecialCharTok{\textasciitilde{}} \FunctionTok{starts\_with}\NormalTok{(}\StringTok{"type"}\NormalTok{)}\SpecialCharTok{:}\NormalTok{shucked\_weight }\SpecialCharTok{+}
+\NormalTok{                  longest\_shell}\SpecialCharTok{:}\NormalTok{diameter }\SpecialCharTok{+}
+\NormalTok{                  shucked\_weight}\SpecialCharTok{:}\NormalTok{shell\_weight) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{step\_center}\NormalTok{(}\FunctionTok{all\_predictors}\NormalTok{()) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{step\_scale}\NormalTok{(}\FunctionTok{all\_predictors}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+Data rings cannot use to predict age since the age column is just the
+linear transformation (age = rings + 1.5) of the rings column.
+Therefore, they have exactly the same distribution and trend with shift.
+
+\hypertarget{question-4}{%
+\subsubsection{Question 4}\label{question-4}}
+
+Create and store a linear regression object using the \texttt{"lm"}
+engine.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lm\_model }\OtherTok{=} \FunctionTok{linear\_reg}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{set\_engine}\NormalTok{(}\StringTok{"lm"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{question-5}{%
+\subsubsection{Question 5}\label{question-5}}
+
+Now:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  set up an empty workflow,
+\item
+  add the model you created in Question 4, and
+\item
+  add the recipe that you created in Question 3.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lm\_wkflow }\OtherTok{\textless{}{-}} \FunctionTok{workflow}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_model}\NormalTok{(lm\_model) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{add\_recipe}\NormalTok{(abalone\_recipe)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{question-6}{%
+\subsubsection{Question 6}\label{question-6}}
+
+Use your \texttt{fit()} object to predict the age of a hypothetical
+female abalone with longest\_shell = 0.50, diameter = 0.10, height =
+0.30, whole\_weight = 4, shucked\_weight = 1, viscera\_weight = 2,
+shell\_weight = 1.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lm\_fit }\OtherTok{\textless{}{-}} \FunctionTok{fit}\NormalTok{(lm\_wkflow, aba\_train\_no\_rings)}
+\NormalTok{female\_aba\_pred }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}\AttributeTok{type =} \StringTok{"F"}\NormalTok{, }
+                              \AttributeTok{longest\_shell =} \FloatTok{0.50}\NormalTok{, }
+                              \AttributeTok{diameter =} \FloatTok{0.10}\NormalTok{, }
+                              \AttributeTok{height =} \FloatTok{0.30}\NormalTok{, }
+                              \AttributeTok{whole\_weight =} \DecValTok{4}\NormalTok{, }
+                              \AttributeTok{shucked\_weight =} \DecValTok{1}\NormalTok{, }
+                              \AttributeTok{viscera\_weight =} \DecValTok{2}\NormalTok{, }
+                              \AttributeTok{shell\_weight =} \DecValTok{1}\NormalTok{)}
+
+\NormalTok{lm\_fit }\SpecialCharTok{\%\textgreater{}\%} 
+  \CommentTok{\# This returns the parsnip object:}
+  \FunctionTok{extract\_fit\_parsnip}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} 
+  \CommentTok{\# Now tidy the linear model object:}
+  \FunctionTok{tidy}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 14 x 5
+##    term                          estimate std.error statistic  p.value
+##    <chr>                            <dbl>     <dbl>     <dbl>    <dbl>
+##  1 (Intercept)                     11.4      0.0373   307.    0       
+##  2 longest_shell                    0.312    0.290      1.08  2.81e- 1
+##  3 diameter                         2.29     0.319      7.17  8.98e-13
+##  4 height                           0.204    0.0699     2.92  3.52e- 3
+##  5 whole_weight                     4.84     0.401     12.1   8.62e-33
+##  6 shucked_weight                  -4.22     0.255    -16.5   5.29e-59
+##  7 viscera_weight                  -0.928    0.160     -5.81  6.85e- 9
+##  8 shell_weight                     1.76     0.219      8.04  1.21e-15
+##  9 type_I                          -0.909    0.114     -7.98  2.01e-15
+## 10 type_M                          -0.243    0.103     -2.36  1.82e- 2
+## 11 type_I_x_shucked_weight          0.462    0.0857     5.39  7.55e- 8
+## 12 type_M_x_shucked_weight          0.260    0.108      2.41  1.61e- 2
+## 13 longest_shell_x_diameter        -2.78     0.399     -6.96  4.01e-12
+## 14 shucked_weight_x_shell_weight   -0.164    0.206     -0.793 4.28e- 1
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{predict}\NormalTok{(lm\_fit, }\AttributeTok{new\_data =}\NormalTok{ female\_aba\_pred)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 1 x 1
+##   .pred
+##   <dbl>
+## 1  22.7
+\end{verbatim}
+
+\hypertarget{question-7}{%
+\subsubsection{Question 7}\label{question-7}}
+
+Now you want to assess your model's performance. To do this, use the
+\texttt{yardstick} package:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a metric set that includes \emph{R\textsuperscript{2}}, RMSE
+  (root mean squared error), and MAE (mean absolute error).
+\item
+  Use \texttt{predict()} and \texttt{bind\_cols()} to create a tibble of
+  your model's predicted values from the \textbf{training data} along
+  with the actual observed ages (these are needed to assess your model's
+  performance).
+\item
+  Finally, apply your metric set to the tibble, report the results, and
+  interpret the \emph{R\textsuperscript{2}} value.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{abalone\_train\_rlt }\OtherTok{\textless{}{-}} \FunctionTok{predict}\NormalTok{(lm\_fit, }\AttributeTok{new\_data =}\NormalTok{ aba\_train\_no\_rings }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(}\SpecialCharTok{{-}}\NormalTok{age)) }
+\NormalTok{abalone\_train\_rlt }\OtherTok{\textless{}{-}} \FunctionTok{bind\_cols}\NormalTok{(abalone\_train\_rlt, aba\_train\_no\_rings }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{select}\NormalTok{(age))}
+
+\FunctionTok{head}\NormalTok{(abalone\_train\_rlt)                        }
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 2
+##   .pred   age
+##   <dbl> <dbl>
+## 1  8.10   8.5
+## 2  9.33   9.5
+## 3 10.5    8.5
+## 4 10.1    9.5
+## 5 11.0    9.5
+## 6  6.35   6.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{abalone\_metrics}\OtherTok{\textless{}{-}}\FunctionTok{metric\_set}\NormalTok{(rmse,rsq,mae)}
+\FunctionTok{abalone\_metrics}\NormalTok{(abalone\_train\_rlt, }\AttributeTok{truth=}\NormalTok{age,}
+                \AttributeTok{estimate=}\NormalTok{.pred)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 3
+##   .metric .estimator .estimate
+##   <chr>   <chr>          <dbl>
+## 1 rmse    standard       2.15 
+## 2 rsq     standard       0.562
+## 3 mae     standard       1.55
+\end{verbatim}
+
+After applying metric set to the tibble, the results shows the value of
+\emph{R\textsuperscript{2}} value is 0.5618608 approximately which
+indicates that 56.18608\% of the data fit the regression model.
+
+\hypertarget{required-for-231-students}{%
+\subsubsection{Required for 231
+Students}\label{required-for-231-students}}
+
+In lecture, we presented the general bias-variance tradeoff, which takes
+the form:
+
+\[
+E[(y_0 - \hat{f}(x_0))^2]=Var(\hat{f}(x_0))+[Bias(\hat{f}(x_0))]^2+Var(\epsilon)
+\]
+
+where the underlying model \(Y=f(X)+\epsilon\) satisfies the following:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\epsilon\) is a zero-mean random noise term and \(X\) is non-random
+  (all randomness in \(Y\) comes from \(\epsilon\));
+\item
+  \((x_0, y_0)\) represents a test observation, independent of the
+  training set, drawn from the same model;
+\item
+  \(\hat{f}(.)\) is the estimate of \(f\) obtained from the training
+  set.
+\end{itemize}
+
+\hypertarget{question-8}{%
+\paragraph{Question 8}\label{question-8}}
+
+Which term(s) in the bias-variance tradeoff above represent the
+reproducible error? Which term(s) represent the irreducible error?
+
+\hypertarget{question-9}{%
+\paragraph{Question 9}\label{question-9}}
+
+Using the bias-variance tradeoff above, demonstrate that the expected
+test error is always at least as large as the irreducible error.
+
+\hypertarget{question-10}{%
+\paragraph{Question 10}\label{question-10}}
+
+Prove the bias-variance tradeoff.
+
+Hints:
+
+\begin{itemize}
+\tightlist
+\item
+  use the definition of \(Bias(\hat{f}(x_0))=E[\hat{f}(x_0)]-f(x_0)\);
+\item
+  reorganize terms in the expected test error by adding and subtracting
+  \(E[\hat{f}(x_0)]\)
+\end{itemize}
+
+\end{document}
